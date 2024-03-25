@@ -2,6 +2,13 @@
 
 This repository is an almost minimal reproducible example of WASI test failure on the latest main snapshot.
 
+Logs:
+
+- main-snapshot-2024-03-13 & DEVELOPMENT-SNAPSHOT-2024-03-20-a-wasm: https://github.com/kkk669/wasm-test-example/actions/runs/8423442736/job/23065080131
+- main-snapshot-2024-03-20 & DEVELOPMENT-SNAPSHOT-2024-03-22-a-wasm: https://github.com/kkk669/wasm-test-example/actions/runs/8423442736/job/23065079774
+
+Logs (main-snapshot-2024-03-20 & DEVELOPMENT-SNAPSHOT-2024-03-22-a-wasm):
+
 ```console
 $ swift build -c release --build-tests --experimental-swift-sdk wasm32-unknown-wasi -Xlinker -z -Xlinker stack-size=524288
 $ wasmtime --dir=/ .build/release/WasmTestExamplePackageTests.wasm
